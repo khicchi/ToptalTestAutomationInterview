@@ -140,4 +140,12 @@ public class BrowserUtil {
     public static void turnOnImplicitWaits() {
         DriverUtil.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
     }
+
+    public static void hardWait(int timeInSeconds){
+        try{
+            Thread.sleep(timeInSeconds * 1000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

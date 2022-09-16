@@ -7,13 +7,13 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseWebTest {
   @BeforeMethod
-  void setupBeforeMethod(){
+  protected void setupBeforeMethod(){
     BrowserUtil.turnOnImplicitWaits();
     DriverUtil.getDriver().manage().window().maximize();
   }
 
   @AfterMethod
-  void tearDownMethod() {
+  protected void tearDownMethod() {
     DriverUtil.closeDriver();
   }
 }
