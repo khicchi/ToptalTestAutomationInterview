@@ -2,11 +2,13 @@ package net.kicchi.toptal.modals;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class PetStoreServerError{
+@Getter
+public class PetStoreServerMessage {
   @JsonProperty("code")
   private int code;
   @JsonProperty("type")
@@ -21,5 +23,9 @@ public class PetStoreServerError{
         ", type='" + type + '\'' +
         ", message='" + message + '\'' +
         '}';
+  }
+
+  public String extractSessionId(){
+    return message.split(":")[1];
   }
 }

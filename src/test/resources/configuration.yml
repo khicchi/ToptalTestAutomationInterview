@@ -1,4 +1,4 @@
 main-page-url: https://todomvc.com/examples/react/#/
 url-to-navigate: https://todomvc.com/examples/react/#/
 browser-type-id: 1
-api-base-url: http://petstore.swagger.io/v2
+api-base-url: https://petstore.swagger.io/v2
